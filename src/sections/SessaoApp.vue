@@ -7,8 +7,8 @@ import downloads from "../data/downloads";
     <div id="download-section" class="container mx-auto px-5 md:w-4/5">
         <section class="py-16 pt-18">
             <div class="w-4/5 md:w-3/5 mx-auto">
-                <h2 class="text-3xl md:text-4xl font-theme-heading font-medium text-center">Download the extension</h2>
-                <p class="text-theme-grayish-blue text-center text-lg font-theme-content mt-7">We've got more browsers in pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
+                <h2 class="text-3xl md:text-4xl font-theme-heading font-medium text-center">Nossos Aplicativos</h2>
+                <p class="text-theme-grayish-blue text-center text-lg font-theme-content mt-7">Acesse nossos serviços e controle seu plano de proteção veicular diretamente do seu smartphone com nossos aplicativos intuitivos e práticos.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 <div v-for="(download, index) in downloads" :key="download.id" :class="[index === 0 ? 'lg:mb-10' : '', index === 1 ? 'lg:mt-10' : '', index === 2 ? 'lg:mt-20 lg:-mb-10' : '']" class="shadow-lg rounded-lg">
@@ -21,7 +21,28 @@ import downloads from "../data/downloads";
                         <img class="w-full" src="/images/bg-dots.svg" alt="Dot Backaground" />
                     </div>
                     <div class="flex justify-center mb-8">
-                        <LinkButton btn-type="primary" :link="download.link" class="text-sm">Add & Install Extension</LinkButton>
+                            <a
+                            :href="download.linkg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="app-download-button"
+                            >
+                            <img
+                                src="/images/googlestore.png"
+                                alt="Baixar na Google Play"
+                            />
+                            </a>
+                            <a
+                            :href="download.linka"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="app-download-button"
+                            >
+                            <img
+                                src="/images/appstore.png"
+                                alt="Baixar na App Store"
+                            />
+                            </a>
                     </div>
                 </div>
             </div>

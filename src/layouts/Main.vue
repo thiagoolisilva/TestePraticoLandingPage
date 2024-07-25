@@ -1,7 +1,7 @@
 <script setup>
 import SessaoInicial from "../sections/SessaoInicial.vue";
 import SessaoServico from "../sections/SessaoServico.vue";
-import DownloadSection from "../sections/DownloadSection.vue";
+import SessaoApp from "../sections/SessaoApp.vue";
 import FaqSection from "../sections/FaqSection.vue";
 import SubscribeSection from "../sections/SubscribeSection.vue";
 </script>
@@ -11,7 +11,7 @@ import SubscribeSection from "../sections/SubscribeSection.vue";
 
     <SessaoServico />
 
-    <DownloadSection />
+    <SessaoApp />
 
     <FaqSection />
 
