@@ -1,6 +1,6 @@
 <script setup>
 import SessaoInicial from "../sections/SessaoInicial.vue";
-import FeatureSection from "../sections/FeatureSection.vue";
+import SessaoServico from "../sections/SessaoServico.vue";
 import DownloadSection from "../sections/DownloadSection.vue";
 import FaqSection from "../sections/FaqSection.vue";
 import SubscribeSection from "../sections/SubscribeSection.vue";
@@ -9,7 +9,7 @@ import SubscribeSection from "../sections/SubscribeSection.vue";
 <template>
     <SessaoInicial />
 
-    <FeatureSection />
+    <SessaoServico />
 
     <DownloadSection />
 
