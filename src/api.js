@@ -18,7 +18,6 @@ const parser = new XMLParser({
 export default {
   //Oficina
   async getOficinas(codigo, cpf) {
-    console.log("teste");
     try {
       let response;
       if (cpf) {
@@ -29,7 +28,7 @@ export default {
       
       const result = parser.parse(response.data);
       const oficinas = result.ClasseRetornoOficina.ListaOficinas.d2p1_ClasseOficina;
-      console.log(oficinas);
+      
       return oficinas;
     } catch (error) {
       throw error;
