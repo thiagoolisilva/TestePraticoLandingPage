@@ -19,12 +19,12 @@ const enviaFormulario = async () => {
         oficina0.value = true;
         oficinas.value = [];
       } else {
-        oficinas.value = response;
+        oficinas.value = response.data.ListaOficinas;
         oficina0.value = false;
         Swal.fire({
           icon: 'success',
           title: 'Oficinas Encontradas',
-          text: `${response.length} oficina(s) encontrada(s).`
+          text: `${response.data.ListaOficinas.length} oficina(s) encontrada(s).`
         });
       }
     } catch (error) {
@@ -32,13 +32,6 @@ const enviaFormulario = async () => {
         oficinas.value = [];
     }
   }
-};
-
-// Função para formatar o telefone
-const formatTelefone = (telefone) => {
-  // Extrair apenas números
-  const telefoneStr = telefone.toString();
-  return telefoneStr.replace(/\D/g, ''); // Remove caracteres não numéricos
 };
 </script>
 
@@ -66,10 +59,10 @@ const formatTelefone = (telefone) => {
         <div v-if="oficinas.length > 0" class="mt-10 text-white">
           <h3 class="text-2xl">Detalhes das Oficinas</h3>
           <div v-for="(oficina, index) in oficinas" :key="index" class="mb-4">
-            <p><strong>Nome:</strong> {{ oficina.d2p1_Nome }}</p>
-            <p><strong>Endereço:</strong> {{ oficina.d2p1_Endereco }}</p>
-            <p><strong>Telefone:</strong> {{ formatTelefone(oficina.d2p1_Telefone1) }}</p>
-            <p><strong>Descrição:</strong> {{ oficina.d2p1_DescricaoCurta }}</p>
+            <p><strong>Nome:</strong> {{ oficina.Nome }}</p>
+            <p><strong>Endereço:</strong> {{ oficina.Endereco }}</p>
+            <p><strong>Telefone:</strong> {{ oficina.Telefone1 }}</p>
+            <p><strong>Descrição:</strong> {{ oficina.DescricaoCurta }}</p>
           </div>
         </div>
       </section>

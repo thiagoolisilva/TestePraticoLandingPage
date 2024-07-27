@@ -1,18 +1,10 @@
 import axios from 'axios';
-import { XMLParser } from 'fast-xml-parser';
 
 const apiClient = axios.create({
   baseURL: '/api',
   headers: {
-    'Accept': 'application/xml'
+    'Accept': 'application/json'
   }
-});
-
-const parser = new XMLParser({
-  ignoreAttributes: false,
-  attributeNamePrefix: "@_",
-  parseAttributeValue: true,
-  transformTagName: (tagName) => tagName.replace(/:/g, '_')
 });
 
 export default {
@@ -26,10 +18,8 @@ export default {
         response = await apiClient.get(`/Api/Oficina?codigoAssociacao=${codigo}`);
       }
       
-      const result = parser.parse(response.data);
-      const oficinas = result.ClasseRetornoOficina.ListaOficinas.d2p1_ClasseOficina;
-      
-      return oficinas;
+      return response;
+
     } catch (error) {
       throw error;
     }
