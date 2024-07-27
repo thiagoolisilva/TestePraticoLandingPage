@@ -1,19 +1,19 @@
 <script setup>
-import SessaoInicial from "../sections/SessaoInicial.vue";
-import SessaoServico from "../sections/SessaoServico.vue";
-import SessaoApp from "../sections/SessaoApp.vue";
-import SessaoIndicacao from "../sections/SessaoIndicacao.vue";
-import SessaoOficinas from "../sections/SessaoOficinas.vue";
+import SecaoInicial from "../sections/SecaoInicial.vue";
+import SecaoServico from "../sections/SecaoServico.vue";
+import SecaoApp from "../sections/SecaoApp.vue";
+import SecaoIndicacao from "../sections/SecaoIndicacao.vue";
+import SecaoOficinas from "../sections/SecaoOficinas.vue";
 </script>
 
 <template>
-    <SessaoInicial />
+    <SecaoInicial />
 
-    <SessaoServico />
+    <SecaoServico />
 
-    <SessaoApp />
+    <SecaoApp />
 
-    <SessaoIndicacao />
+    <SecaoIndicacao />
 
-    <SessaoOficinas />
+    <SecaoOficinas />
 </template>
