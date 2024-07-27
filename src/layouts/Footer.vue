@@ -6,7 +6,7 @@
             <!-- Grid com Principais Informações -->
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="flex justify-center md:justify-start">
-                    <!-- Imagem do Header -->
+                    <!-- Imagem do Footer -->
                     <img src="/images/hinova-mobile-branco.png" class="w-17 h-12" alt="Logo" />
                 </div>
                 <div class="grid grid-cols-2 gap-4">

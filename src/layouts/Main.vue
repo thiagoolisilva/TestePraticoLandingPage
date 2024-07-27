@@ -3,7 +3,7 @@ import SessaoInicial from "../sections/SessaoInicial.vue";
 import SessaoServico from "../sections/SessaoServico.vue";
 import SessaoApp from "../sections/SessaoApp.vue";
 import FaqSection from "../sections/FaqSection.vue";
-import SubscribeSection from "../sections/SubscribeSection.vue";
+import SessaoOficinas from "../sections/SessaoOficinas.vue";
 </script>
 
 <template>
@@ -15,5 +15,5 @@ import SubscribeSection from "../sections/SubscribeSection.vue";
 
     <FaqSection />
 
-    <SubscribeSection />
+    <SessaoOficinas />
 </template>

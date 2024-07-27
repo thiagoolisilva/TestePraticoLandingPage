@@ -6,7 +6,6 @@ let isOpen = ref(1);
 </script>
 
 <template>
-    <!-- Questions Section Start -->
     <div id="faq" class="container mx-auto px-5 md:w-4/5">
         <section class="py-16 pt-18">
             <div class="w-4/5 md:w-3/5 mx-auto">
@@ -30,5 +29,4 @@ let isOpen = ref(1);
             </div>
         </section>
     </div>
-    <!-- Questions Section End -->
 </template>

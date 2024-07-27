@@ -59,6 +59,6 @@ onMounted(() => {
 }
 
 .transition-slide-in {
-  animation: slideIn 0.5s ease-out forwards;
+  animation: slideIn 1s ease-out forwards;
 }
 </style>

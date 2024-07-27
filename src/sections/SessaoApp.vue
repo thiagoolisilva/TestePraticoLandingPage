@@ -3,7 +3,6 @@ import downloads from "../data/downloads";
 </script>
 
 <template>
-    <!-- Download Section Start -->
     <div id="download-section" class="container mx-auto px-5 md:w-4/5">
         <section class="py-16 pt-18">
             <div class="w-4/5 md:w-3/5 mx-auto">
@@ -21,32 +20,15 @@ import downloads from "../data/downloads";
                         <img class="w-full" src="/images/bg-dots.svg" alt="Dot Backaground" />
                     </div>
                     <div class="flex justify-center mb-8">
-                            <a
-                            :href="download.linkg"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="app-download-button"
-                            >
-                            <img
-                                src="/images/googlestore.png"
-                                alt="Baixar na Google Play"
-                            />
+                            <a :href="download.linkg" target="_blank" rel="noopener noreferrer" class="app-download-button" >
+                            <img src="/images/googlestore.png" alt="Baixar na Google Play" />
                             </a>
-                            <a
-                            :href="download.linka"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="app-download-button"
-                            >
-                            <img
-                                src="/images/appstore.png"
-                                alt="Baixar na App Store"
-                            />
+                            <a :href="download.linka" target="_blank" rel="noopener noreferrer" class="app-download-button" >
+                            <img src="/images/appstore.png" alt="Baixar na App Store" />
                             </a>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <!-- Download Section End -->
 </template>
