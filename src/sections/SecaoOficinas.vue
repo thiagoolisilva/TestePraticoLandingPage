@@ -19,14 +19,14 @@ const enviaFormulario = async () => {
       const response = await api.getOficinas(codigo.value, cpf.value);
       
       // Verifica se a resposta da API contém oficinas
-      if (response.length === 0) {
+      if (response.data.ListaOficinas.length === 0) {
         oficina0.value = true;
         oficinas.value = [];
       } else {
         oficinas.value = response.data.ListaOficinas;
         oficina0.value = false;
         
-        // Exibe uma mensagem de sucesso usando SweetAlert2
+        // Exibe uma mensagem de sucesso
         Swal.fire({
           icon: 'success',
           title: 'Oficinas Encontradas',
