@@ -2,7 +2,7 @@
 import SessaoInicial from "../sections/SessaoInicial.vue";
 import SessaoServico from "../sections/SessaoServico.vue";
 import SessaoApp from "../sections/SessaoApp.vue";
-import FaqSection from "../sections/FaqSection.vue";
+import SessaoIndicacao from "../sections/SessaoIndicacao.vue";
 import SessaoOficinas from "../sections/SessaoOficinas.vue";
 </script>
 
@@ -13,7 +13,7 @@ import SessaoOficinas from "../sections/SessaoOficinas.vue";
 
     <SessaoApp />
 
-    <FaqSection />
+    <SessaoIndicacao />
 
     <SessaoOficinas />
 </template>

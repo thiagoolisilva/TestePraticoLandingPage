@@ -51,7 +51,7 @@ const formatTelefone = (telefone) => {
 
         <form @submit.prevent="enviaFormulario">
           <div class="relative flex flex-col items-center lg:flex-row justify-center lg:space-x-3">
-            <div class="relative w-full lg:mb-0 font-theme-content">
+            <div class="relative w-full lg:mb-0 font-theme-content mb-2">
               <input v-model="codigo" @input="error = false" class="w-full py-3 px-5 text-sm text-gray-600 border-0 shadow-md rounded focus:ring-4 focus:ring-blue-300" type="text" placeholder="Código da Oficina" />
             </div>
             <div class="relative w-full lg:mb-0 font-theme-content">

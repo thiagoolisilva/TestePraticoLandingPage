@@ -6,7 +6,7 @@ let isOpen = ref(1);
 </script>
 
 <template>
-    <div id="features" class="container mx-auto px-5">
+    <div id="servicos" class="container mx-auto px-5">
         <section class="py-16">
             <div class="w-4/5 md:w-3/5 mx-auto">
                 <h2 class="text-3xl md:text-4xl font-semibold font-theme-heading text-center">Serviços</h2>
