@@ -7,6 +7,7 @@ import SecaoOficinas from "../sections/SecaoOficinas.vue";
 </script>
 
 <template>
+    <!-- Componentização das Seções -->
     <SecaoInicial />
 
     <SecaoServico />

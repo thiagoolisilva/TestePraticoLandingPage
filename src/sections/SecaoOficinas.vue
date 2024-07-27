@@ -9,18 +9,24 @@ let oficinas = ref([]);
 let error = ref(false);
 let oficina0 = ref(false);
 
+// Função para enviar o formulário e buscar oficinas
 const enviaFormulario = async () => {
   if (!codigo.value) {
     error.value = true;
   } else {
     try {
+      // Faz a requisição à API para buscar oficinas com base no código e CPF
       const response = await api.getOficinas(codigo.value, cpf.value);
+      
+      // Verifica se a resposta da API contém oficinas
       if (response.length === 0) {
         oficina0.value = true;
         oficinas.value = [];
       } else {
         oficinas.value = response.data.ListaOficinas;
         oficina0.value = false;
+        
+        // Exibe uma mensagem de sucesso usando SweetAlert2
         Swal.fire({
           icon: 'success',
           title: 'Oficinas Encontradas',
@@ -28,8 +34,9 @@ const enviaFormulario = async () => {
         });
       }
     } catch (error) {
-        oficina0.value = true;
-        oficinas.value = [];
+      // Define estados de erro e limpa a lista de oficinas em caso de falha
+      oficina0.value = true;
+      oficinas.value = [];
     }
   }
 };
@@ -42,6 +49,7 @@ const enviaFormulario = async () => {
         <h4 class="text-sm tracking-widest uppercase text-center text-white font-theme-heading">35,000+ Oficinas parceiras</h4>
         <h2 class="text-3xl md:text-4xl font-medium text-center text-white mt-9 mb-10 font-theme-heading">Busque a mais próxima de você!</h2>
 
+        <!-- Formulário para busca de oficinas -->
         <form @submit.prevent="enviaFormulario">
           <div class="relative flex flex-col items-center lg:flex-row justify-center lg:space-x-3">
             <div class="relative w-full lg:mb-0 font-theme-content mb-2">
@@ -52,10 +60,12 @@ const enviaFormulario = async () => {
             </div>
             <Button type="submit" btn-type="secondary">Buscar</Button>
           </div>
-          <div v-if="error" class="text-red-500 mt-3">Por favor, insira o código e o CPF existente.</div>
+          <!-- Mensagens de erro -->
+          <div v-if="error" class="text-red-500 mt-3">Por favor, insira o código e o CPF existentes.</div>
           <div v-if="oficina0" class="text-red-500 mt-3">Nenhuma oficina encontrada.</div>
         </form>
 
+        <!-- Exibição dos detalhes das oficinas -->
         <div v-if="oficinas.length > 0" class="mt-10 text-white">
           <h3 class="text-2xl">Detalhes das Oficinas</h3>
           <div v-for="(oficina, index) in oficinas" :key="index" class="mb-4">
@@ -69,4 +79,3 @@ const enviaFormulario = async () => {
     </div>
   </div>
 </template>
-

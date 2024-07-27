@@ -8,7 +8,11 @@ const amigos = ref({});
 const isOpen = ref(false);
 
 const submitForm = async () => {
-  if (!amigos.value.codigoAssociacao || !amigos.value.cpfAssociado || !amigos.value.emailAssociado || !amigos.value.nomeAssociado || !amigos.value.telefoneAssociado || !amigos.value.placaVeiculoAssociado || !amigos.value.nomeAmigo || !amigos.value.telefoneAmigo || !amigos.value.emailAmigo) {
+  if (!amigos.value.codigoAssociacao || !amigos.value.cpfAssociado || 
+  !amigos.value.emailAssociado || !amigos.value.nomeAssociado || 
+  !amigos.value.telefoneAssociado || !amigos.value.placaVeiculoAssociado || 
+  !amigos.value.nomeAmigo || !amigos.value.telefoneAmigo || !amigos.value.emailAmigo) 
+  {
     error.value = true;
     Swal.fire({
       icon: 'error',
@@ -51,6 +55,7 @@ const submitForm = async () => {
 
       <div class="mt-10 w-full lg:w-3/5 mx-auto">
         <ul class="shadow-lg">
+          <!-- Abre formulario ao clicar -->
           <li @click="isOpen = !isOpen" :class="isOpen ? 'text-theme-secondary' : ''" class="font-theme-content font-medium text-xl cursor-pointer hover:text-theme-secondary py-5 flex justify-between items-center transition duration-200 bg-slate-100 px-6">
             <span>Formulário de Indicação</span>
             <svg :class="isOpen ? 'rotate-180 text-theme-secondary' : 'rotate-0 text-theme-primary'" class="transform" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
