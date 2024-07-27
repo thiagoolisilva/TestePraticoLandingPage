@@ -53,7 +53,7 @@ Siga os passos abaixo para configurar o projeto localmente:
 ## Estrutura do Projeto
 
 - `src/` - Diretório principal do código-fonte.
-  - `assets/` - Imagens e outros recursos estáticos.
+  - `assets/` - Recursos estáticos.
   - `components/` - Componentes Vue.js reutilizáveis.
   - `data/` - Dados estáticos reutilizáveis.
   - `layouts/` - Componentes fixos da página principal.
