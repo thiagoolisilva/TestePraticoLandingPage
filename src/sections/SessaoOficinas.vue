@@ -69,7 +69,7 @@ const formatTelefone = (telefone) => {
             <p><strong>Nome:</strong> {{ oficina.d2p1_Nome }}</p>
             <p><strong>Endereço:</strong> {{ oficina.d2p1_Endereco }}</p>
             <p><strong>Telefone:</strong> {{ formatTelefone(oficina.d2p1_Telefone1) }}</p>
-            <p><strong>Telefone:</strong> {{ oficina.d2p1_DescricaoCurta }}</p>
+            <p><strong>Descrição:</strong> {{ oficina.d2p1_DescricaoCurta }}</p>
           </div>
         </div>
       </section>
