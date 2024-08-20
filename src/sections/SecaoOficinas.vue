@@ -61,18 +61,18 @@ const enviaFormulario = async () => {
             <Button type="submit" btn-type="secondary">Buscar</Button>
           </div>
           <!-- Mensagens de erro -->
-          <div v-if="error" class="text-red-500 mt-3">Por favor, insira o código e o CPF existentes.</div>
-          <div v-if="oficina0" class="text-red-500 mt-3">Nenhuma oficina encontrada.</div>
+          <div v-if="error" class="text-sm tracking-widest text-center text-white font-theme-heading mt-5">Por favor, insira o código e o CPF existentes</div>
+          <div v-if="oficina0" class="text-sm tracking-widest text-center text-white font-theme-heading mt-5">Nenhuma oficina encontrada</div>
         </form>
 
         <!-- Exibição dos detalhes das oficinas -->
         <div v-if="oficinas.length > 0" class="mt-10 text-white">
           <h3 class="text-2xl">Detalhes das Oficinas</h3>
-          <div v-for="(oficina, index) in oficinas" :key="index" class="mb-4">
-            <p><strong>Nome:</strong> {{ oficina.Nome }}</p>
-            <p><strong>Endereço:</strong> {{ oficina.Endereco }}</p>
-            <p><strong>Telefone:</strong> {{ oficina.Telefone1 }}</p>
-            <p><strong>Descrição:</strong> {{ oficina.DescricaoCurta }}</p>
+          <div v-for="(oficina, index) in oficinas" :key="index" class="mb-2 shadow-md mt-2">
+            <p class="ml-1"><strong>Nome:</strong> {{ oficina.Nome }}</p>
+            <p class="ml-1"><strong>Endereço:</strong> {{ oficina.Endereco }}</p>
+            <p class="ml-1"><strong>Telefone:</strong> {{ oficina.Telefone1 }}</p>
+            <p class="ml-1"><strong>Descrição:</strong> {{ oficina.DescricaoCurta }}</p>
           </div>
         </div>
       </section>
