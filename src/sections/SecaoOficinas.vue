@@ -32,6 +32,8 @@ const enviaFormulario = async () => {
           title: 'Oficinas Encontradas',
           text: `${response.data.ListaOficinas.length} oficina(s) encontrada(s).`,
           confirmButtonColor: "#3085d6",
+          timer: 2000,
+          timerProgressBar: true,
         });
       }
     } catch (error) {
