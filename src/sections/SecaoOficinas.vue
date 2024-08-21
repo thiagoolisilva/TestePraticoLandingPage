@@ -30,7 +30,8 @@ const enviaFormulario = async () => {
         Swal.fire({
           icon: 'success',
           title: 'Oficinas Encontradas',
-          text: `${response.data.ListaOficinas.length} oficina(s) encontrada(s).`
+          text: `${response.data.ListaOficinas.length} oficina(s) encontrada(s).`,
+          confirmButtonColor: "#3085d6",
         });
       }
     } catch (error) {
